@@ -24,6 +24,7 @@ string[] SortArrayOfStrings(string[] array)
             arr[i]=tmp;
         }
     }
+    arr = arr.Where(e => e != null).ToArray();
     return arr;
 }
 
