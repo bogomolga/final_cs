@@ -6,10 +6,26 @@ string[] arrayStr = {"Один", "человек", "крепко", "уснул."
                     "нечем", "было", "его", "есть.", "На", "другую", "ночь", "он", "лёг", "и", "положил", "с", "собой", "ложку.", 
                     "Но", "кисель", "ему", "не", "приснился.", "Integer:", "25", "! &", "fin"};
 PrintArray(arrayStr, "Массив: [");
-
+string[] newArray = SortArrayOfStrings(arrayStr);
+PrintArray(newArray, "Новый массив: [");
 
 //-------------------
+string[] SortArrayOfStrings(string[] array)
+{
+    int len = array.Length;
+    string[] arr = new string[len];
+    string tmp;
 
+    for (int i = 0; i < len; i++)
+    {
+        tmp=array[i];
+        if (tmp.Length<=3)
+        {
+            arr[i]=tmp;
+        }
+    }
+    return arr;
+}
 
 
 void PrintArray(string[] collection, string msg)
